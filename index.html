@@ -2,63 +2,47 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f8f6f2">
+  <meta name="theme-color" content="#183953">
   <meta name="description" content="HelloDeng，AvaSubaru486 的个人项目小站。写代码、记录生活，也认真喜欢少女乐队。">
   <title>HelloDeng · AvaSubaru486</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/gbc-background.webp" as="image">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
+  <div class="scenery" aria-hidden="true"></div>
   <a class="skip-link" href="#projects">跳到项目</a>
   <header class="site-header">
-    <a href="#/" class="wordmark" aria-label="HelloDeng 首页"><span class="logo-flower" aria-hidden="true">✳</span> hello<span>deng</span><i>.</i></a>
-    <nav aria-label="主导航"><a href="#/" data-nav="home">首页 <span>HOME</span></a><a href="#projects" data-nav="projects">作品 <span>WORKS</span></a><a href="#about" data-nav="about">关于 <span>ABOUT</span></a></nav>
-    <a class="github-link" href="https://github.com/AvaSubaru486" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    <a href="#/" class="wordmark" aria-label="HelloDeng 首页">hello<span>deng</span><i>.</i></a>
+    <nav aria-label="主导航"><a href="#/">首页</a><a href="#projects">作品</a><a href="#about">关于</a></nav>
+    <a class="github-link" href="https://github.com/AvaSubaru486" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </header>
-
-  <main id="home-view">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-topline"><span><i></i> AVASUBARU486’S LITTLE CORNER</span><span>PERSONAL PORTFOLIO — VOL. 01</span></div>
-      <div class="hero-copy">
+  <main id="home-view" class="home-layout">
+    <aside class="sidebar" aria-label="个人名片">
+      <a class="profile-picture" href="#about" aria-label="关于邓嘉峰"><img src="assets/subaru-avatar.webp" alt="安和昴主题头像" width="200" height="200" fetchpriority="high"><span class="avatar-star" aria-hidden="true">✦</span><span class="avatar-note">GIRLS BAND CRY</span></a>
+      <div class="profile-name"><strong>邓嘉峰</strong><span>@AvaSubaru486</span></div>
+      <div class="glass sidebar-note"><span class="tiny-icon" aria-hidden="true">⌘</span><div>在代码里探索<small>在音乐里充电</small></div></div>
+      <div class="glass interests"><span>编程</span><span>视频剪辑</span><span>摄影</span><span>少女乐队</span><span>GBC</span><span>保持好奇</span></div>
+      <nav class="glass side-nav" aria-label="小站导航"><p class="micro-label">MY LITTLE CORNER</p><a href="#/" class="current"><i></i><span>我的小站<small>HELLO, WORLD!</small></span></a><a href="#projects"><i></i><span>项目与作品<small>CODE & CREATE</small></span></a><a href="#about"><i></i><span>关于我<small>KEEP BEING CURIOUS</small></span></a><a href="credits.html"><i></i><span>素材与致谢<small>WITH LOVE & THANKS</small></span></a></nav>
+      <p class="sidebar-signature">好きなことを、好きなだけ。<span>AWA SUBARU / GBC</span></p>
+    </aside>
+    <div class="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow"><span class="status-dot"></span> AVASUBARU486’S LITTLE CORNER <span class="hero-edition">GIRLS BAND CRY</span></p>
+        <h1 id="hero-title">Hello, I’m <span>AvaSubaru486<span class="title-dot">.</span></span></h1>
         <p class="hello-note">こんにちは！欢迎来到我的小站 <span>✧</span></p>
-        <h1 id="hero-title">把喜欢的事，<br>写成自己的<br><span class="lavender-word">小小宇宙<span class="title-star" aria-hidden="true">✳</span></span><span class="title-period">。</span></h1>
         <p class="hero-description">我是邓嘉峰，也可以叫我 <b>AvaSubaru486</b>。<br>在代码里探索，在音乐里充电。<br>这里收藏着我的项目，还有那些闪闪发光的喜欢。</p>
-        <div class="hero-actions"><a class="button button-dark" href="#projects">看看我的作品 <span>↗</span></a><button class="listen-link" id="hero-listen" type="button"><span class="play-ring">▶</span> 一起听首歌</button></div>
-        <div class="hero-tags"><span>⌘ 编程与创造</span><span>♫ GIRLS BAND CRY</span><span>✧ 永远保持好奇</span></div>
-      </div>
-      <div class="hero-art" aria-label="安和昴主题插画">
-        <div class="art-disc"><div class="disc-rings"></div><span>PLAY YOUR OWN STORY</span></div>
-        <div class="orbit-star star-one" aria-hidden="true">✦</div><div class="orbit-star star-two" aria-hidden="true">✧</div>
-        <span class="art-caption">好きなことを、好きなだけ。</span>
-        <img class="subaru-hero" src="assets/subaru.webp" width="820" height="1800" alt="安和昴，来自《哭泣少女乐队》" fetchpriority="high">
-        <div class="name-sticker"><span>MY FAVORITE DRUMMER</span><strong>安和 すばる<span>♡</span></strong><small>AWA SUBARU / GIRLS BAND CRY</small></div>
-        <div class="art-note"><span>♪</span><p>给平凡的日子<br>加一点喜欢。</p></div>
-        <div class="art-bottom"><span>GIRLS BAND CRY</span><span>非官方同人主题 / FAN-MADE</span></div>
-      </div>
-      <div class="hero-bottom"><span>SCROLL TO DISCOVER <span>↓</span></span><span>CODE. CREATE. REPEAT.</span></div>
-    </section>
-
-    <section id="projects" class="projects-section" aria-labelledby="projects-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORKS</p><h2 id="projects-title">我的项目<span class="small-star">✳</span></h2></div><p>从一个想法开始，<br>慢慢把它变成可以打开的世界。</p></div>
-      <div class="project-grid" id="project-grid"></div>
-      <p class="project-footnote"><span>✧</span> 更多有趣的想法，正在路上。 <span class="footnote-en">MORE TO COME</span></p>
-    </section>
-
-    <section id="about" class="about-section" aria-labelledby="about-title">
-      <div class="about-avatar"><img src="assets/subaru-avatar.webp" alt="安和昴主题头像" width="200" height="200" loading="lazy"><span>HELLO, WORLD!</span></div>
-      <div class="about-copy"><p class="eyebrow">02 / A LITTLE ABOUT ME</p><h2 id="about-title">认真创造，也尽情喜欢。</h2><p>编程、视频剪辑、摄影，还有少女乐队。<br>喜欢用不同的方式记录生活，把脑海里的小想法变成现实。</p><a href="#/project/personal-introduction" class="text-link">认识更多面的我 <span>↗</span></a></div>
-      <div class="about-side" aria-hidden="true"><span>KEEP<br>BEING<br><i>CURIOUS.</i></span><b>✴</b></div>
-    </section>
+        <div class="hero-actions"><a class="icon-button" href="https://github.com/AvaSubaru486" target="_blank" rel="noopener noreferrer" aria-label="访问我的 GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.55 9.55 0 0 1 5 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a><a class="icon-button" href="#projects" aria-label="看看我的作品" title="我的作品">▧</a><a class="icon-button" href="#about" aria-label="关于我" title="关于我">☺</a><button class="listen-link" id="hero-listen" type="button"><span aria-hidden="true">♫</span> 一起听首歌</button><span class="hero-motto">CODE. CREATE. REPEAT.</span></div>
+      </section>
+      <section class="pixel-section" aria-label="音乐主题像素装饰，不代表提交记录"><div class="pixel-caption"><span>把喜欢的事，写成自己的小小宇宙。</span><span>♫ LITTLE MELODY</span></div><div id="pixel-grid" class="pixel-grid" aria-hidden="true"></div><div class="melody-line" aria-hidden="true"></div></section>
+      <section class="website-section" aria-labelledby="website-title"><div class="section-heading"><h2 id="website-title"><span aria-hidden="true">▧</span> WebSite <small>/ 常用入口</small></h2></div><div class="website-grid"><a class="glass website-card" href="#/project/personal-introduction"><div><strong>个人介绍</strong><small>认识更多面的我</small></div><span class="website-icon lavender" aria-hidden="true">☺</span></a><a class="glass website-card" href="#/project/red-spirit-map"><div><strong>红色精神地图</strong><small>沿着足迹，读懂来路</small></div><span class="website-icon coral" aria-hidden="true">⌖</span></a><a class="glass website-card" href="https://github.com/AvaSubaru486" target="_blank" rel="noopener noreferrer"><div><strong>GitHub</strong><small>代码与我的小想法</small></div><span class="website-icon mint" aria-hidden="true">⌘</span></a></div></section>
+      <section id="projects" class="projects-section" aria-labelledby="projects-title"><div class="section-heading"><h2 id="projects-title"><span aria-hidden="true">⌘</span> Project <small>/ 我的项目</small></h2><span class="section-count">02 SELECTED WORKS</span></div><p class="section-description">从一个想法开始，慢慢把它变成可以打开的世界。</p><div class="project-grid" id="project-grid"></div><p class="project-footnote"><span>✧</span> 更多有趣的想法，正在路上。 <span class="footnote-en">MORE TO COME</span></p></section>
+      <section id="about" class="about-section glass" aria-labelledby="about-title"><div class="about-copy"><p class="eyebrow">A LITTLE ABOUT ME</p><h2 id="about-title">认真创造，也尽情喜欢。</h2><p>编程、视频剪辑、摄影，还有少女乐队。<br>喜欢用不同的方式记录生活，把脑海里的小想法变成现实。</p><a href="#/project/personal-introduction" class="text-link">认识更多面的我 <span>↗</span></a></div><div class="about-art"><span class="about-star" aria-hidden="true">✧</span><img src="assets/subaru.webp" width="820" height="1800" alt="安和昴，来自《哭泣少女乐队》" loading="lazy"></div></section>
+      <footer class="site-footer"><span>© <span id="year"></span> AvaSubaru486 · 非官方 GBC 同人主题站</span><a href="credits.html">素材与致谢 ↗</a><p>用好奇心，继续写下一页。</p></footer>
+    </div>
   </main>
-
-  <section id="project-view" hidden aria-label="项目浏览器">
-    <div class="project-toolbar"><a href="#/">← 返回主页</a><h1 id="project-title"></h1><a id="project-external" target="_blank" rel="noopener noreferrer">独立打开 ↗</a></div>
-    <p class="project-loading" id="project-loading" role="status">正在打开项目…</p>
-    <div id="project-frame-container"></div>
-  </section>
-
-  <footer class="site-footer"><a href="#/" class="wordmark">hello<span>deng</span><i>.</i></a><p>用好奇心，继续写下一页。<br><small>© <span id="year"></span> AvaSubaru486 · 非官方 GBC 同人主题站</small></p><a href="credits.html">素材与致谢 ↗</a><span class="footer-flower" aria-hidden="true">✳</span></footer>
+  <section id="project-view" hidden aria-label="项目浏览器"><div class="project-toolbar"><a href="#/">← 返回主页</a><h1 id="project-title"></h1><a id="project-external" target="_blank" rel="noopener noreferrer">独立打开 ↗</a></div><p class="project-loading" id="project-loading" role="status">正在打开项目…</p><div id="project-frame-container"></div></section>
   <noscript><p>启用 JavaScript 可使用站内播放器。项目也可独立访问：<a href="/Personal-Introduction-Assignment/">个人介绍</a>、<a href="/Red-Spirit-Map-Competition-Events/">红色精神地图</a>。</p></noscript>
 </body>
 </html>

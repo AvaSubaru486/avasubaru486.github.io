@@ -2,6 +2,7 @@ import { projects } from './projects.js';
 import { createPlayer } from './shared/player.js';
 
 const player = createPlayer();
+player.setAttribute('theme', 'glass');
 const home = document.querySelector('#home-view');
 const projectView = document.querySelector('#project-view');
 const frames = document.querySelector('#project-frame-container');
@@ -9,14 +10,42 @@ const grid = document.querySelector('#project-grid');
 let currentId = null;
 let loadTimer;
 
+// Decorative melody pixels, deliberately not presented as contribution data.
+const pixelGrid = document.querySelector('#pixel-grid');
+const letters = [
+  '01110011110001111',
+  '10000010001010000',
+  '10000010001010000',
+  '10111011110010000',
+  '10001010001010000',
+  '10001010001010000',
+  '01110011110001111',
+];
+const pixels = document.createDocumentFragment();
+for (let row = 0; row < 7; row++) {
+  for (let col = 0; col < 53; col++) {
+    const cell = document.createElement('span');
+    let tone = 0;
+    if (col >= 18 && col < 35 && letters[row][col - 18] === '1') tone = 2;
+    else if (col < 14 || col > 39) {
+      const height = 1 + ((col * 7 + 3) % 7);
+      if (row >= 7 - height && (col % 3 !== 0)) tone = col < 14 ? 1 : 3;
+    }
+    cell.className = 'pixel' + (tone ? ' tone-' + tone : '');
+    pixels.append(cell);
+  }
+}
+pixelGrid.append(pixels);
+
 for (const project of projects) {
   const card = document.createElement('article');
-  card.className = `project-card project-${project.cover}`;
+  card.className = `glass project-card project-${project.cover}`;
   card.innerHTML = `<a class="project-cover cover-${project.cover}" href="#/project/${project.id}" aria-label="打开${project.name}">
-    <span class="cover-label">${project.category}</span><span class="cover-number">${project.number}</span>
-    ${project.cover === 'intro' ? '<div class="intro-preview"><span>HELLO, THIS IS ME</span><strong>你好，<br>我是<span>邓嘉峰。</span></strong><small>BE CURIOUS. KEEP CREATING.</small><i>DJF<span>.</span></i></div>' : '<div class="map-preview"><img src="assets/map-preview.webp" alt="红色精神地图界面预览" loading="lazy" onerror="this.hidden=true"><div class="map-preview-fallback"><span>1921 — 至今</span><strong>红色精神<br>全国历史地图</strong><small>沿着足迹，读懂来路。</small></div></div>'}
+    <span class="project-thumbnail"><img src="assets/${project.cover === 'intro' ? 'subaru-avatar.webp' : 'map-preview.webp'}" alt="" width="47" height="47" loading="lazy"></span>
+    <div class="project-heading"><h3>${project.name}</h3><span class="cover-label">${project.category}</span></div>
     <span class="cover-open" aria-hidden="true">↗</span></a>
-    <div class="project-details"><div class="project-title-row"><h3><a href="#/project/${project.id}">${project.name}</a></h3><span>${project.number} / PROJECT</span></div><p class="project-english">${project.title}</p><p>${project.description}</p><div class="project-card-bottom"><div class="project-tags">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div><a class="source-link" href="https://github.com/AvaSubaru486/${project.repository}" target="_blank" rel="noopener noreferrer" aria-label="${project.name}源码">源码 ↗</a></div></div>`;
+    <p class="project-english">${project.title}</p><p class="project-description">${project.description}</p>
+    <div class="project-card-bottom"><div class="project-tags">${project.tags.map(tag => `<span>${tag}</span>`).join('')}</div><a class="source-link" href="https://github.com/AvaSubaru486/${project.repository}" target="_blank" rel="noopener noreferrer" aria-label="${project.name}源码">源码 ↗</a></div>`;
   grid.append(card);
 }
 

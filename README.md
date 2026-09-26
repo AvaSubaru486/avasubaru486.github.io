@@ -2,6 +2,8 @@
 
 安和昴主题的个人项目集合。纯 HTML / CSS / JavaScript，免费部署到 GitHub Pages。
 
+主页采用 GBC 五人合照背景、左侧个人栏及半透明项目卡片。图片来自站主提供的素材，仅发布压缩后的 `assets/gbc-background.webp`。像素格是 GBC 字样和音乐装饰，不是 GitHub 提交统计。手机端会将个人栏收为顶部名片；个人简介和两个项目内部页面保持不变。
+
 网站：https://avasubaru486.github.io/
 
 ## 本地与部署
