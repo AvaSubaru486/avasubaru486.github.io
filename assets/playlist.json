@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ed",
+    "title": "I'm Nobody",
+    "subtitle": "GBC · 片尾曲 / TV size",
+    "src": "music/ed.mp3"
+  },
+  {
+    "id": "op",
+    "title": "雑踏、僕らの街",
+    "subtitle": "GBC · 片头曲 / TV size",
+    "src": "music/op.mp3"
+  },
+  {
+    "id": "mv-01",
+    "title": "サヨナラサヨナラサヨナラ",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-01.mp3"
+  },
+  {
+    "id": "mv-02",
+    "title": "偽りの理",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-02.mp3"
+  },
+  {
+    "id": "mv-03",
+    "title": "傷つき傷つけ痛くて辛い",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-03.mp3"
+  },
+  {
+    "id": "mv-04",
+    "title": "名もなき何もかも",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-04.mp3"
+  },
+  {
+    "id": "mv-05",
+    "title": "極私的極彩色アンサー",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-05.mp3"
+  },
+  {
+    "id": "mv-06",
+    "title": "気鬱、白濁す",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-06.mp3"
+  },
+  {
+    "id": "mv-07",
+    "title": "爆ぜて咲く",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-07.mp3"
+  },
+  {
+    "id": "mv-08",
+    "title": "理想的パラドクスとは",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-08.mp3"
+  },
+  {
+    "id": "mv-09",
+    "title": "運命に賭けたい論理",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-09.mp3"
+  },
+  {
+    "id": "mv-10",
+    "title": "黎明を穿つ",
+    "subtitle": "トゲナシトゲアリ · MV",
+    "src": "music/mv-10.mp3"
+  }
+]

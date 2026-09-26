@@ -1,0 +1,14 @@
+dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.env
+.env.*
+runtime/
+*.exe
+*.zip
+*.mkv
+*.mp4
+自动部署/cache/
+自动部署/logs/
