@@ -33,7 +33,7 @@
         <p class="eyebrow"><span class="status-dot"></span> CODE, CREATE & KEEP CURIOUS</p>
         <h1>Hello, I’m<br><span>AvaSubaru486.</span></h1>
         <p class="hero-note">把好奇心写成项目，把过程留在这里。</p>
-        <p class="hero-description">欢迎来到我的小站。这里收藏我的作品，也记录从一个想法到真正运行起来的过程。<br>最近在做的事：让普通电脑，也能探索本地 AI。</p>
+        <p class="hero-description">欢迎来到我的小站。这里收藏我的作品，也记录从一个想法到真正运行起来的过程。<br>最近在做的事：探索低配置电脑上的大模型本地推理。</p>
         <div class="hero-actions"><a class="button button-primary" href="#projects">看看最新作品 <span>↓</span></a><a class="text-link" href="/blog/">读一篇开发笔记 ↗</a></div>
         <div class="melody" aria-hidden="true"><span>GIRLS BAND CRY</span><i></i><span>✧</span></div>
       </section>
@@ -46,12 +46,12 @@
             <div class="model-orbit"><span>8<small>B</small></span><span>27<small>B</small></span><span>70<small>B</small></span></div>
             <div class="art-bottom"><span>WINDOWS / LOCAL INFERENCE</span><span>✦</span></div>
           </div>
-          <div class="featured-copy"><p class="eyebrow">WINDOWS · 本地 AI · 参赛作品</p><h3>Local AI Workspace</h3><p class="project-subtitle">让已有电脑，成为本地 AI 实验平台。</p><p>把 8B、27B、70B 模型、推理环境和桌面交互装进一个本地工作区。用低比特量化、按需读取和进程管理协调有限内存，再用统一日志记录每一次运行。</p><div class="tags"><span>离线便携包</span><span>资源管理</span><span>运行日志</span></div><div class="card-actions"><a class="button button-primary" href="/blog/local-ai-workspace/">了解这个项目 ↗</a><a class="text-link" href="https://github.com/AvaSubaru486/LocalAIWorkspace" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></div></div>
+          <div class="featured-copy"><p class="eyebrow">WINDOWS · CPU 本地推理 · 低内存探索</p><h3>Local AI Workspace</h3><p class="project-subtitle">在有限内存里，探索 8B 到 70B 的本地推理。</p><p>以 i5-1235U、16 GiB 内存、Intel UHD 核显作为参考实验平台，把三档模型、桌面聊天和资源管理整合进同一个 Windows 工作区。通过低比特量化压缩权重，8B / 27B 按内存映射访问文件，70B 由专用后端分层读取，让 SSD、有限内存和 CPU 协作完成推理。</p><p>项目管理模型预算、串行任务、切换与取消，并记录首字等待、生成速度和内存占用。按需读取以更多等待换取更低的同时驻留需求；从轻量交互到 70B 短任务，具体条件与实机结果都写进开发笔记。</p><div class="tags"><span>16 GiB 参考机</span><span>CPU 推理</span><span>量化与分层读取</span><span>运行日志</span></div><div class="card-actions"><a class="button button-primary" href="/blog/local-ai-workspace/">了解这个项目 ↗</a><a class="text-link" href="https://github.com/AvaSubaru486/LocalAIWorkspace" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></div></div>
         </article>
       </section>
       <section class="section" aria-labelledby="notes-title">
         <div class="section-heading"><h2 id="notes-title">Blog <small>/ 开发笔记</small></h2><a class="text-link" href="/blog/">全部文章 ↗</a></div>
-        <a class="post-card glass" href="/blog/local-ai-workspace/"><div><p class="post-meta"><time datetime="2026-11-14">2026.11.14</time><span>项目介绍 · 本地 AI</span></p><h3>让 16 GiB 电脑尝试 70B 本地推理</h3><p>聊聊 Local AI Workspace 的三档模型、有限内存中的读取方式，以及一组带着测试条件的真实运行记录。</p><span class="read-more">阅读文章 <b>↗</b></span></div><span class="post-mark" aria-hidden="true">01</span></a>
+        <a class="post-card glass" href="/blog/local-ai-workspace/"><div><p class="post-meta"><time datetime="2026-11-14">2026.11.14</time><span>项目介绍 · 本地 AI</span></p><h3>低配置运行大模型：从 8B 到 70B 的本地推理探索</h3><p>从 16 GiB 参考机出发，详解低比特量化、内存映射、70B 分层读取、资源预算，以及一次短回答背后的等待与取舍。</p><span class="read-more">阅读文章 <b>↗</b></span></div><span class="post-mark" aria-hidden="true">01</span></a>
       </section>
       <footer class="site-footer"><span>© 2026 AvaSubaru486 · HelloDeng</span><a href="/credits.html">GBC 主题与素材说明 ↗</a><p>认真创造，也尽情喜欢。</p></footer>
     </div>
